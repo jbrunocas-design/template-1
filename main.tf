@@ -7,6 +7,6 @@ resource "aws_instance" "hello" {
   instance_type = "t3.micro"              # Free Tier eligible
 
   tags = {
-    Name = "HelloWorldInstance"
+    Name = "CreatedFromTemplate"
   }
 }
