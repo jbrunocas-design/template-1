@@ -3,6 +3,10 @@ name: 'Create EC2 Instance'
 # This workflow is triggered by a manual button click in GitHub 
 # or an API call (e.g., from Backstage).
 on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
