@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "${{ values.Region }}"
 }
 
 resource "aws_instance" "hello" {
@@ -7,6 +7,6 @@ resource "aws_instance" "hello" {
   instance_type = "t3.micro"              # Free Tier eligible
 
   tags = {
-    Name = "CreatedFromTemplate"
+    Name = "${{ values.InstanceName }}"
   }
 }
