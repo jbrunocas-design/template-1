@@ -26,7 +26,7 @@ jobs:
       with:
         # IMPORTANT: This must be the same role used in the apply workflow
         role-to-assume: arn:aws:iam::438985216510:role/GitHubActionsOIDCRole
-        aws-region: "us-east-1"
+        aws-region: "${{ values.Region }}"
 
     # Step 3: Setup Terraform CLI
     - name: Setup Terraform
